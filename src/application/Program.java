@@ -39,12 +39,13 @@ public class Program {
 		sellerdao.insert(newseller);
 		System.out.println("Inserted! new id = "+newseller.getId());
 		
-		list = sellerdao.findByDepartment(department);
-		for (Seller obj : list) {
-			System.out.println(obj);
-			
-		}
-
+		System.out.println("\n=== Test 5: seller Update===");
+		seller = sellerdao.findById(1);
+		seller.setName("Martha Waine");
+		sellerdao.update(seller);
+		System.out.println("Update  completed");
+		
+		
 	}
 	
 
